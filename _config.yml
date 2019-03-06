@@ -1,14 +1,14 @@
 # Site settings
 title: s-flow's blog
 description: programming study blog
-baseurl: "/" # the subpath of your site, e.g. /blog
+baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://s-flow.github.io" # the base hostname & protocol for your site e.g. http://willianjusten.com.br
 
 # User settings
 username: hyerim
 user_description: developer
 email: s.flow.origin@gmail.com
-github_username:  s-flow.github.io
+github_username:  s-flow
 
 
 # Build settings
