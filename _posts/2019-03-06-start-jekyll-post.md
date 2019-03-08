@@ -3,7 +3,7 @@ layout: post
 title: "2019-03-06 TIL"
 image: '/assets/img/'
 description:
-main-class: 'css'
+main-class: 'til'
 tags:
 - jekyll
 - TIL

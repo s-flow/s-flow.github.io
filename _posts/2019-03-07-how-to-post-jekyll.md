@@ -1,9 +1,9 @@
 ---
 layout: post
-title: "jekyll 포스팅 시작하기 #1"
+title: "jekyll 시작하기 #1"
 image: '/assets/img/'
 description:
-main-class: 'misc'
+main-class: 'tutorial'
 color: '#2DA0C3'
 tags:
 - jekyll
