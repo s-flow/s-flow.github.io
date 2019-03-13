@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "2019-03-13 javascript object basic"
+title: "javascript object 기초"
 image: '/assets/img/'
 main-class: 'js'
 tags:
@@ -34,7 +34,7 @@ var person = {
 
 ### 하위 namespace 접근법
 #### 점 표기법
-객체의 프로퍼티와 메소드는 점 표기법으로 접근할 수 있습닏. 
+객체의 프로퍼티와 메소드는 점 표기법으로 접근할 수 있습니다. 
 객체 이름은 네임스페이스처럼 동작합니다. 객체 내 캡슐화되어 있는 것에 접근하려면 점을 찍고 접근하고자 하는 하위 항목을 입력합니다. 
 간단한 프로퍼티 이름일 수도 있고, 배열의 일부이거나 객체 내 메소드를 호출할 수도 있습니다. 
 {% highlight javascript %}
