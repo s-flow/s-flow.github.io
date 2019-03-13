@@ -24,7 +24,7 @@ introduction: 자바스크립트 객체 생성 요약
 
 객체를 생성하기 위한 함수를 사용한다면 어떨까요? 아마 다음과 같은 형태가 될 것 입니다. 
 
-{% hightlight javascript %}
+{% highlight javascript %}
 // 객체 생성을 위한 함수
 function createNewPefunction createNewPerson(name) {
   var obj = {};
@@ -42,9 +42,9 @@ salva.greeting();
 var tom = createNewPerson('Tom');
 tom.name;
 tom.greeting();
-{% endhightlight %}
+{% endhighlight %}
 
-{% hightlight javascript %}
+{% highlight javascript %}
 // 생성자 함수 사용
 function Person(name) {
   this.name = name; 
@@ -62,5 +62,4 @@ person2.name;
 person2.greeting();
 
 
-{% endhightlight %}
-
+{% endhighlight %}
