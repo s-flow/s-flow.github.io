@@ -207,4 +207,46 @@ person1.valueOf();
 ECMAScript2015부터는 Object.getPrototypeOf(obj) 함수를 통해 객체의 프로토타입 객체에 바로 접근할 수 있게 되었습니다. 
 
 
+후우 후우 읽으면서 이해하고 적으려 해도 정말 prototype이 도대체 뭔지 모르겠군요 !!!
+이럴땐 다시 초심으로 돌아가 프로토타입이란 뭔가 부분을 다시 읽어보았습니다. 
+ 
+- 자바스크립트는 프로토타입 기반의 언이로 상속을 지원하는 템플릿으로 프로토타입을 사용합니다. 모든 객체들은 부모로부터 프로토타입을 이용하여 메소드나 속성을 상속 받게 됩니다. 
+
+- 보다 엄밀히 말하자면 상속되는 속성과 메소드들은 **각 객체가 아니라. 객체의 생성자의 prototype이라는 속성에 정의되어 있습니다.** 
+
+- 상속을 받는 것은 부모의 모든 메소드와 속성이 아니라 부모의 prototype에 정의된 메소드와 속성들만 상속 받습니다. 부모의 나머지 메소드와 속성들은 부모의 생성자 내에서만 사용할 수 있는 멤버들입니다. 
+
+- Person의 프로토타입엔 별도의 프로토타입에 정의를 하지 않아 별로 내용이 많지 않습니다. 하지만 Object의 경우 상속받은 객체들이 사용할 수 있는 수많은 메소드들이 prototype속성에 정의되어 있습니다. 
+
+```
+Person.prototype
+{constructor: ƒ}constructor: ƒ Person(first, last, age, gender, interests)__proto__: Object
+
+
+Object.prototype
+{constructor: ƒ, __defineGetter__: ƒ, __defineSetter__: ƒ, hasOwnProperty: ƒ, __lookupGetter__: ƒ, …}
+```
+
+### 생성자 속성
+- 모든 객체들은 constructor 속성으로 가진 객체를 프로토타입으로 가집니다. 
+- constructor 속성은 생성자 함수를 가리킵니다. 모든 객체들이 생성자 함수를 가리키는 프로토타입의 constructor를 가지고 있으므로 생성자 함수를 수정하면 생성된 모든 객체들이 함께 업데이트 됩니다. (사실 프로토타입 객체는 모든 인스턴스에서 공유되기 때문에 별도 갱신 과정 없이 동일하게 접근합니다.)
+
+### 프로토타입 업데이트 해보기
+
+위 Person 생성자 함수에 다음과 같은 프로토타입 속성에 메소드를 추가해봅시다. 
+{% highlight javascript %}
+Person.prototype.farewell = function() {
+  alert(this.name.first + ' has left the building. Bye for now!');
+};
+{% endhighlight %}
+
+콘솔에 다음을 실행해 보면
+```
+person1.farewell();
+```
+
+person1, 2, 3에 별도로 할당하거나 추가하지 않았음에도 불구하고 farewall이라는 메소드를 사용할 수 있게 됩니다!
+
+
+
 
