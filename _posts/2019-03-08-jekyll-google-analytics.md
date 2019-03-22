@@ -2,6 +2,7 @@
 layout: post
 title: "2019-03-08 TIL"
 image: '/assets/img/'
+main-class: 'til'
 description: 'jekyll에 GA 달기'
 introduction: 'jekyll에 GA 달기'
 tag:
